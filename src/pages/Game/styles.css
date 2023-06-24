@@ -1,0 +1,12 @@
+.game-container {
+  /* Nombre del contador */
+  counter-reset: game;
+}
+
+.game-container input:checked {
+  counter-increment: game;
+}
+
+.total-count::after {
+  content: counter(game);
+}
