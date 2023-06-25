@@ -1,6 +1,7 @@
 import { useRoutes } from 'react-router-dom';
 import { Counter } from '../../pages/Counter';
 import { Stacking } from '../Stacking';
+import { Duration } from '../Duration';
 
 function AppRoutes() {
   let routes = useRoutes([
@@ -11,6 +12,10 @@ function AppRoutes() {
     {
       path: '/stacking',
       element: <Stacking />,
+    },
+    {
+      path: '/duration',
+      element: <Duration />,
     },
   ]);
 
