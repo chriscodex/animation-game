@@ -14,6 +14,7 @@
   width: 300px;
   background-color: #ccefff;
   box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+  overflow: hidden;
 }
 
 .stacking-container .layer {
@@ -31,14 +32,14 @@
   bottom: 0;
   right: 10px;
   /* Animation */
-  animation-name: aparecer;
-  animation-duration: 2s;
+  animation-name: layer1;
+  animation-duration: 2.2s;
   /* Aceleración */
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
-@keyframes aparecer {
+@keyframes layer1 {
   0% {
     bottom: 0px;
   }
@@ -50,7 +51,7 @@
   }
 }
 
-.layer-1 input[type=checkbox] {
+.layer input[type=checkbox] {
   width: 60px;
   height: 60px;
   position: absolute;
@@ -62,7 +63,7 @@
 }
 
 /* Counter */
-.layer-1 input:checked {
+.layer input:checked {
   counter-increment: checkCounter;
 }
 
@@ -74,10 +75,9 @@
   margin-left: 20px;
 }
 
-
 .stacking-container .layer-2 {
   z-index: 2;
-  height: 480px;
+  height: 490px;
   width: 150px;
   background-image: url('../../assets/goomba.svg');
   background-repeat: no-repeat;
@@ -85,6 +85,24 @@
   background-position: top;
   bottom: 0;
   left: 40px;
+  /* Animation */
+  animation-name: layer2;
+  animation-duration: 1.7s;
+  /* Aceleración */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes layer2 {
+  0% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: -72px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }
 
 .stacking-container .layer-3 {
@@ -103,7 +121,7 @@
 
 .stacking-container .layer-4 {
   z-index: 4;
-  height: 350px;
+  height: 360px;
   width: 150px;
   background-image: url('../../assets/goomba.svg');
   background-repeat: no-repeat;
@@ -111,6 +129,24 @@
   background-position: top;
   bottom: 0;
   left: 0px;
+  /* Animation */
+  animation-name: layer4;
+  animation-duration: 1.5s;
+  /* Aceleración */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes layer4 {
+  0% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: -72px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }
 
 .stacking-container .layer-5 {
@@ -128,7 +164,7 @@
 
 .stacking-container .layer-6 {
   z-index: 6;
-  height: 250px;
+  height: 170px;
   width: 150px;
   background-image: url('../../assets/goomba.svg');
   background-repeat: no-repeat;
@@ -136,6 +172,24 @@
   background-position: top;
   bottom: 0;
   right: 0px;
+  /* Animation */
+  animation-name: layer6;
+  animation-duration: 1s;
+  /* Aceleración */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes layer6 {
+  0% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: 115px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }
 
 .stacking-container .layer-7 {
