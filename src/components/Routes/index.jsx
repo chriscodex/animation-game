@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom';
-import { Counter } from '../../pages/Counter';
+import { Counter } from '../Counter';
 import { Stacking } from '../Stacking';
 import { Duration } from '../Duration';
 
@@ -7,11 +7,11 @@ function AppRoutes() {
   let routes = useRoutes([
     {
       path: '/',
-      element: <Counter />,
+      element: <Stacking />,
     },
     {
       path: '/stacking',
-      element: <Stacking />,
+      element: <Counter />,
     },
     {
       path: '/duration',
