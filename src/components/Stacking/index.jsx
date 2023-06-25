@@ -4,7 +4,9 @@ function Stacking() {
   return (
     <div className="stacking-container">
       <div className="phone">
-        <div className="layer layer-1"></div>
+        <div className="layer layer-1">
+          <input type="checkbox" />
+        </div>
         <div className="layer layer-2"></div>
         <div className="layer layer-3"></div>
         <div className="layer layer-4"></div>
@@ -14,6 +16,7 @@ function Stacking() {
         <div className="layer layer-8"></div>
         <div className="layer layer-9"></div>
         <div className="layer layer-10"></div>
+        <h3 className='score'>Score: </h3>
       </div>
     </div>
   );

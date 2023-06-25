@@ -3,6 +3,7 @@
   width: 100%;
   display: grid;
   place-items: center;
+  counter-reset: checkCounter;
 }
 
 .stacking-container .phone {
@@ -21,7 +22,7 @@
 
 .stacking-container .layer-1 {
   z-index: 1;
-  height: 480px;
+  height: 490px;
   width: 150px;
   background-image: url('../../assets/goomba.svg');
   background-repeat: no-repeat;
@@ -29,23 +30,53 @@
   background-position: top;
   bottom: 0;
   right: 10px;
-  animation: aparecer;
+  /* Animation */
+  animation-name: aparecer;
+  animation-duration: 2s;
+  /* Aceleración */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes aparecer {
   0% {
-
+    bottom: 0px;
   }
-  5% {
-
+  25% {
+    bottom: -72px;
   }
-  10% {
-    
+  100% {
+    bottom: 0px;
   }
 }
 
-.stacking-container .layer-2 {
+.layer-1 input[type=checkbox] {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 45px;
+  top: 45px;
+  cursor: pointer;
   z-index: 1;
+  appearance: none;
+}
+
+/* Counter */
+.layer-1 input:checked {
+  counter-increment: checkCounter;
+}
+
+.stacking-container .score::after {
+  content: counter(checkCounter);
+}
+
+.stacking-container .score {
+  margin-left: 20px;
+}
+
+
+.stacking-container .layer-2 {
+  z-index: 2;
   height: 480px;
   width: 150px;
   background-image: url('../../assets/goomba.svg');
