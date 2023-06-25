@@ -1,11 +1,16 @@
 import { useRoutes } from 'react-router-dom';
-import { Game } from '../../pages/Game';
+import { Counter } from '../../pages/Counter';
+import { Stacking } from '../Stacking';
 
 function AppRoutes() {
   let routes = useRoutes([
     {
       path: '/',
-      element: <Game />,
+      element: <Counter />,
+    },
+    {
+      path: '/stacking',
+      element: <Stacking />,
     },
   ]);
 

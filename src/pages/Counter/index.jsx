@@ -1,6 +1,6 @@
 import './styles.css'
 
-function Game() {
+function Counter() {
   return (
     <div className='game-container'>
       <ul>
@@ -14,4 +14,4 @@ function Game() {
   )
 }
 
-export { Game }
+export { Counter }
